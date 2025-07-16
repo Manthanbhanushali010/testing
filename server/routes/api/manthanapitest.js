@@ -34,29 +34,29 @@ const mockContractData = {
   }
 };
 
-// @route    GET api/claudeapitest/demo
+// @route    GET api/manthanapitest/demo
 // @desc     Demo endpoint to showcase API functionality
 // @access   Public
 router.get('/demo', async (req, res) => {
   try {
-    console.log('\n=== Claude API Test Demo ===');
+    console.log('\n=== Manthan API Test Demo ===');
     console.log('This endpoint demonstrates smart contract interaction capabilities.');
     console.log('Available endpoints:');
-    console.log('- GET /api/claudeapitest/demo');
-    console.log('- GET /api/claudeapitest/network/:network');
-    console.log('- GET /api/claudeapitest/token/:network');
-    console.log('- GET /api/claudeapitest/health');
+    console.log('- GET /api/manthanapitest/demo');
+    console.log('- GET /api/manthanapitest/network/:network');
+    console.log('- GET /api/manthanapitest/token/:network');
+    console.log('- GET /api/manthanapitest/health');
     console.log('============================\n');
 
     res.json({
-      message: 'Claude API Test - Smart Contract Integration Demo',
+      message: 'Manthan API Test - Smart Contract Integration Demo',
       status: 'success',
       supportedNetworks: ['ethereum', 'polygon', 'bsc', 'arbitrum', 'avalanche'],
       endpoints: {
-        demo: '/api/claudeapitest/demo',
-        networkInfo: '/api/claudeapitest/network/:network',
-        tokenInfo: '/api/claudeapitest/token/:network',
-        healthCheck: '/api/claudeapitest/health'
+        demo: '/api/manthanapitest/demo',
+        networkInfo: '/api/manthanapitest/network/:network',
+        tokenInfo: '/api/manthanapitest/token/:network',
+        healthCheck: '/api/manthanapitest/health'
       },
       timestamp: new Date().toISOString()
     });
@@ -67,7 +67,7 @@ router.get('/demo', async (req, res) => {
   }
 });
 
-// @route    GET api/claudeapitest/network/:network
+// @route    GET api/manthanapitest/network/:network
 // @desc     Get network information
 // @access   Public
 router.get('/network/:network', async (req, res) => {
@@ -149,7 +149,7 @@ router.get('/network/:network', async (req, res) => {
   }
 });
 
-// @route    GET api/claudeapitest/token/:network
+// @route    GET api/manthanapitest/token/:network
 // @desc     Get token information from smart contract (mock data)
 // @access   Public
 router.get('/token/:network', async (req, res) => {
@@ -192,7 +192,7 @@ router.get('/token/:network', async (req, res) => {
   }
 });
 
-// @route    GET api/claudeapitest/health
+// @route    GET api/manthanapitest/health
 // @desc     Health check endpoint
 // @access   Public
 router.get('/health', async (req, res) => {
@@ -204,14 +204,14 @@ router.get('/health', async (req, res) => {
 
     res.json({
       status: 'healthy',
-      message: 'Claude API Test is running successfully',
+      message: 'Manthan API Test is running successfully',
       uptime: process.uptime(),
       timestamp: new Date().toISOString(),
       endpoints: {
-        demo: '/api/claudeapitest/demo',
-        network: '/api/claudeapitest/network/:network',
-        token: '/api/claudeapitest/token/:network',
-        health: '/api/claudeapitest/health'
+        demo: '/api/manthanapitest/demo',
+        network: '/api/manthanapitest/network/:network',
+        token: '/api/manthanapitest/token/:network',
+        health: '/api/manthanapitest/health'
       }
     });
 
@@ -221,7 +221,7 @@ router.get('/health', async (req, res) => {
   }
 });
 
-// @route    POST api/claudeapitest/simulate-contract-call
+// @route    POST api/manthanapitest/simulate-contract-call
 // @desc     Simulate smart contract function call
 // @access   Public
 router.post('/simulate-contract-call', async (req, res) => {

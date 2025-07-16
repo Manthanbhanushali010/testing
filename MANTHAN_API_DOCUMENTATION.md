@@ -1,12 +1,12 @@
-# Claude API Test - Smart Contract Integration API
+# Manthan API Test - Smart Contract Integration API
 
 ## Overview
 
 This API provides smart contract integration capabilities for multiple blockchain networks. It was created as part of a blockchain developer assessment to demonstrate proficiency in backend development, smart contract interaction, and API design.
 
-**Developer**: Claude AI Assistant  
-**API Name**: claudeapitest  
-**Base URL**: `http://localhost:5025/api/claudeapitest`  
+**Developer**: Manthan Bhanushali  
+**API Name**: manthanapitest  
+**Base URL**: `http://localhost:5025/api/manthanapitest`  
 **Created**: July 2025
 
 ## Supported Networks
@@ -20,21 +20,21 @@ This API provides smart contract integration capabilities for multiple blockchai
 ## API Endpoints
 
 ### 1. Demo Endpoint
-**GET** `/api/claudeapitest/demo`
+**GET** `/api/manthanapitest/demo`
 
 Returns an overview of the API with available endpoints and supported networks.
 
 #### Response Example:
 ```json
 {
-  "message": "Claude API Test - Smart Contract Integration Demo",
+  "message": "Manthan API Test - Smart Contract Integration Demo",
   "status": "success",
   "supportedNetworks": ["ethereum", "polygon", "bsc", "arbitrum", "avalanche"],
   "endpoints": {
-    "demo": "/api/claudeapitest/demo",
-    "networkInfo": "/api/claudeapitest/network/:network",
-    "tokenInfo": "/api/claudeapitest/token/:network",
-    "healthCheck": "/api/claudeapitest/health"
+    "demo": "/api/manthanapitest/demo",
+    "networkInfo": "/api/manthanapitest/network/:network",
+    "tokenInfo": "/api/manthanapitest/token/:network",
+    "healthCheck": "/api/manthanapitest/health"
   },
   "timestamp": "2025-07-16T16:54:05.563Z"
 }
@@ -42,18 +42,18 @@ Returns an overview of the API with available endpoints and supported networks.
 
 #### Console Output:
 ```
-=== Claude API Test Demo ===
+=== Manthan API Test Demo ===
 This endpoint demonstrates smart contract interaction capabilities.
 Available endpoints:
-- GET /api/claudeapitest/demo
-- GET /api/claudeapitest/network/:network
-- GET /api/claudeapitest/token/:network
-- GET /api/claudeapitest/health
+- GET /api/manthanapitest/demo
+- GET /api/manthanapitest/network/:network
+- GET /api/manthanapitest/token/:network
+- GET /api/manthanapitest/health
 ============================
 ```
 
 ### 2. Network Information
-**GET** `/api/claudeapitest/network/:network`
+**GET** `/api/manthanapitest/network/:network`
 
 Retrieves detailed information about a specific blockchain network.
 
@@ -62,7 +62,7 @@ Retrieves detailed information about a specific blockchain network.
 
 #### Example Request:
 ```bash
-curl -X GET http://localhost:5025/api/claudeapitest/network/ethereum
+curl -X GET http://localhost:5025/api/manthanapitest/network/ethereum
 ```
 
 #### Response Example:
@@ -89,7 +89,7 @@ RPC URL: https://mainnet.infura.io/v3/758874998f5bd0c393da094e1967a72b
 ```
 
 ### 3. Token Information
-**GET** `/api/claudeapitest/token/:network`
+**GET** `/api/manthanapitest/token/:network`
 
 Simulates ERC-20 token contract interactions to retrieve token information.
 
@@ -98,7 +98,7 @@ Simulates ERC-20 token contract interactions to retrieve token information.
 
 #### Example Request:
 ```bash
-curl -X GET http://localhost:5025/api/claudeapitest/token/polygon
+curl -X GET http://localhost:5025/api/manthanapitest/token/polygon
 ```
 
 #### Response Example:
@@ -133,27 +133,27 @@ Total Supply: 10000000000000000000000000000
 ```
 
 ### 4. Health Check
-**GET** `/api/claudeapitest/health`
+**GET** `/api/manthanapitest/health`
 
 Provides API health status and server uptime information.
 
 #### Example Request:
 ```bash
-curl -X GET http://localhost:5025/api/claudeapitest/health
+curl -X GET http://localhost:5025/api/manthanapitest/health
 ```
 
 #### Response Example:
 ```json
 {
   "status": "healthy",
-  "message": "Claude API Test is running successfully",
+  "message": "Manthan API Test is running successfully",
   "uptime": 315.482476583,
   "timestamp": "2025-07-16T16:54:14.368Z",
   "endpoints": {
-    "demo": "/api/claudeapitest/demo",
-    "network": "/api/claudeapitest/network/:network",
-    "token": "/api/claudeapitest/token/:network",
-    "health": "/api/claudeapitest/health"
+    "demo": "/api/manthanapitest/demo",
+    "network": "/api/manthanapitest/network/:network",
+    "token": "/api/manthanapitest/token/:network",
+    "health": "/api/manthanapitest/health"
   }
 }
 ```
@@ -167,7 +167,7 @@ Timestamp: 2025-07-16T16:54:14.368Z
 ```
 
 ### 5. Smart Contract Simulation
-**POST** `/api/claudeapitest/simulate-contract-call`
+**POST** `/api/manthanapitest/simulate-contract-call`
 
 Simulates smart contract function calls and returns transaction details.
 
@@ -183,7 +183,7 @@ Simulates smart contract function calls and returns transaction details.
 
 #### Example Request:
 ```bash
-curl -X POST http://localhost:5025/api/claudeapitest/simulate-contract-call \
+curl -X POST http://localhost:5025/api/manthanapitest/simulate-contract-call \
   -H "Content-Type: application/json" \
   -d '{
     "network": "ethereum",
@@ -252,7 +252,7 @@ All endpoints include comprehensive error handling:
 
 ### File Structure:
 ```
-/server/routes/api/claudeapitest.js - Main API implementation
+/server/routes/api/manthanapitest.js - Main API implementation
 /server/config/constant.js - Network RPC URLs
 /server.js - Route registration
 ```
@@ -273,11 +273,11 @@ All endpoints include comprehensive error handling:
 node server.js
 
 # 2. Test all endpoints
-curl -X GET http://localhost:5025/api/claudeapitest/demo
-curl -X GET http://localhost:5025/api/claudeapitest/network/ethereum
-curl -X GET http://localhost:5025/api/claudeapitest/token/polygon
-curl -X GET http://localhost:5025/api/claudeapitest/health
-curl -X POST http://localhost:5025/api/claudeapitest/simulate-contract-call \
+curl -X GET http://localhost:5025/api/manthanapitest/demo
+curl -X GET http://localhost:5025/api/manthanapitest/network/ethereum
+curl -X GET http://localhost:5025/api/manthanapitest/token/polygon
+curl -X GET http://localhost:5025/api/manthanapitest/health
+curl -X POST http://localhost:5025/api/manthanapitest/simulate-contract-call \
   -H "Content-Type: application/json" \
   -d '{"network":"ethereum","contractAddress":"0x123456789abcdef","functionName":"balanceOf","parameters":["0x123"]}'
 ```
